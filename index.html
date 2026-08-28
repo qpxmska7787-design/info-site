@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>사이트 바로가기</title>
-<meta name="description" content="유용한 사이트를 한눈에 확인하고 바로 이동하세요.">
+<meta name="description" content="추천 사이트 바로가기">
 
 <style>
 *{
@@ -15,139 +15,164 @@
 body{
   margin:0;
   font-family:Arial,"Noto Sans KR",sans-serif;
-  background:#f4f5f7;
+  background:#f3f5f7;
   color:#222;
 }
 
 header{
-  background:#ffffff;
-  border-bottom:1px solid #e5e5e5;
+  background:#fff;
   text-align:center;
-  padding:22px 15px;
+  padding:25px 15px;
+  border-bottom:1px solid #ddd;
 }
 
 header h1{
-  margin:0;
-  font-size:24px;
+  margin:0 0 8px;
+  font-size:26px;
 }
 
 header p{
-  margin:8px 0 0;
+  margin:0;
   color:#777;
-  font-size:14px;
 }
 
 .container{
-  max-width:600px;
-  margin:25px auto;
+  width:100%;
+  max-width:1000px;
+  margin:30px auto;
   padding:0 15px;
 }
 
+/* 가로 배너 */
+
 .banner{
-  display:block;
+  display:flex;
+  align-items:center;
+  width:100%;
+  min-height:130px;
+  margin-bottom:18px;
+  padding:25px 30px;
+
+  background:#fff;
+  border-radius:12px;
+
   text-decoration:none;
   color:#222;
-  background:#ffffff;
-  border-radius:16px;
-  margin-bottom:18px;
-  padding:24px 20px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.08);
-  transition:0.2s;
+
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+
+  transition:.2s;
 }
 
 .banner:hover{
   transform:translateY(-2px);
-  box-shadow:0 6px 20px rgba(0,0,0,0.12);
+  box-shadow:0 6px 18px rgba(0,0,0,.13);
 }
 
-.banner-top{
+.logo{
+  width:75px;
+  height:75px;
+
   display:flex;
   align-items:center;
-}
-
-.icon{
-  width:55px;
-  height:55px;
-  border-radius:14px;
-  background:#1769aa;
-  color:#ffffff;
-  display:flex;
   justify-content:center;
-  align-items:center;
-  font-size:25px;
-  font-weight:bold;
-  margin-right:15px;
+
   flex-shrink:0;
+
+  margin-right:25px;
+
+  border-radius:12px;
+
+  background:#1769aa;
+  color:#fff;
+
+  font-size:30px;
+  font-weight:bold;
 }
 
-.text{
+.content{
   flex:1;
 }
 
-.text h2{
-  margin:0 0 6px;
-  font-size:20px;
+.content h2{
+  margin:0 0 8px;
+  font-size:22px;
 }
 
-.text p{
+.content p{
   margin:0;
   color:#666;
-  font-size:14px;
   line-height:1.6;
 }
 
 .go{
-  margin-top:18px;
+  margin-left:25px;
+
+  padding:13px 22px;
+
   background:#1769aa;
   color:white;
-  text-align:center;
-  padding:12px;
-  border-radius:9px;
-  font-weight:bold;
-}
 
-.notice{
-  text-align:center;
-  font-size:12px;
-  color:#888;
-  margin:25px 10px;
-  line-height:1.7;
+  border-radius:8px;
+
+  font-weight:bold;
+  white-space:nowrap;
 }
 
 footer{
   text-align:center;
-  padding:30px 15px;
+  padding:30px;
   color:#999;
   font-size:13px;
 }
 
-@media(max-width:600px){
 
-  header h1{
-    font-size:21px;
-  }
+/* 모바일 */
+
+@media(max-width:650px){
 
   .container{
-    margin-top:18px;
+    margin:18px auto;
   }
 
   .banner{
-    padding:20px 17px;
+    min-height:105px;
+    padding:18px 15px;
   }
 
-  .text h2{
+  .logo{
+    width:55px;
+    height:55px;
+    margin-right:15px;
+    font-size:22px;
+  }
+
+  .content h2{
     font-size:18px;
+  }
+
+  .content p{
+    font-size:13px;
+  }
+
+  .go{
+    display:none;
   }
 
 }
 </style>
+
 </head>
 
 <body>
 
+
 <header>
-  <h1>사이트 바로가기</h1>
-  <p>원하는 사이트를 선택하세요.</p>
+
+<h1>추천 사이트 바로가기</h1>
+
+<p>배너를 클릭하면 해당 사이트로 이동합니다.</p>
+
 </header>
 
 
@@ -161,24 +186,24 @@ footer{
    target="_blank"
    rel="noopener noreferrer">
 
-  <div class="banner-top">
+  <div class="logo">A</div>
 
-    <div class="icon">A</div>
+  <div class="content">
 
-    <div class="text">
-      <h2>사이트 이름 1</h2>
-      <p>
-        사이트에 대한 간단한 설명을 입력하세요.
-      </p>
-    </div>
+    <h2>사이트 이름 1</h2>
+
+    <p>
+      사이트에 대한 간단한 설명을 입력하세요.
+    </p>
 
   </div>
 
   <div class="go">
-    사이트 바로가기 →
+    바로가기 →
   </div>
 
 </a>
+
 
 
 <!-- 배너 2 -->
@@ -188,24 +213,24 @@ footer{
    target="_blank"
    rel="noopener noreferrer">
 
-  <div class="banner-top">
+  <div class="logo">B</div>
 
-    <div class="icon">B</div>
+  <div class="content">
 
-    <div class="text">
-      <h2>사이트 이름 2</h2>
-      <p>
-        두 번째 사이트에 대한 설명을 입력하세요.
-      </p>
-    </div>
+    <h2>사이트 이름 2</h2>
+
+    <p>
+      두 번째 사이트에 대한 설명을 입력하세요.
+    </p>
 
   </div>
 
   <div class="go">
-    사이트 바로가기 →
+    바로가기 →
   </div>
 
 </a>
+
 
 
 <!-- 배너 3 -->
@@ -215,24 +240,24 @@ footer{
    target="_blank"
    rel="noopener noreferrer">
 
-  <div class="banner-top">
+  <div class="logo">C</div>
 
-    <div class="icon">C</div>
+  <div class="content">
 
-    <div class="text">
-      <h2>사이트 이름 3</h2>
-      <p>
-        세 번째 사이트에 대한 설명을 입력하세요.
-      </p>
-    </div>
+    <h2>사이트 이름 3</h2>
+
+    <p>
+      세 번째 사이트에 대한 설명을 입력하세요.
+    </p>
 
   </div>
 
   <div class="go">
-    사이트 바로가기 →
+    바로가기 →
   </div>
 
 </a>
+
 
 
 <!-- 배너 4 -->
@@ -242,24 +267,24 @@ footer{
    target="_blank"
    rel="noopener noreferrer">
 
-  <div class="banner-top">
+  <div class="logo">D</div>
 
-    <div class="icon">D</div>
+  <div class="content">
 
-    <div class="text">
-      <h2>사이트 이름 4</h2>
-      <p>
-        네 번째 사이트에 대한 설명을 입력하세요.
-      </p>
-    </div>
+    <h2>사이트 이름 4</h2>
+
+    <p>
+      네 번째 사이트에 대한 설명을 입력하세요.
+    </p>
 
   </div>
 
   <div class="go">
-    사이트 바로가기 →
+    바로가기 →
   </div>
 
 </a>
+
 
 
 <!-- 배너 5 -->
@@ -269,36 +294,34 @@ footer{
    target="_blank"
    rel="noopener noreferrer">
 
-  <div class="banner-top">
+  <div class="logo">E</div>
 
-    <div class="icon">E</div>
+  <div class="content">
 
-    <div class="text">
-      <h2>사이트 이름 5</h2>
-      <p>
-        다섯 번째 사이트에 대한 설명을 입력하세요.
-      </p>
-    </div>
+    <h2>사이트 이름 5</h2>
+
+    <p>
+      다섯 번째 사이트에 대한 설명을 입력하세요.
+    </p>
 
   </div>
 
   <div class="go">
-    사이트 바로가기 →
+    바로가기 →
   </div>
 
 </a>
 
 
-<div class="notice">
-  외부 사이트 이용 전 주소와 서비스 내용을 확인하세요.
-</div>
-
 </main>
 
 
 <footer>
-  © 2026 사이트 바로가기
+
+© 2026 사이트 바로가기
+
 </footer>
+
 
 </body>
 </html>
